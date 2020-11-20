@@ -1,6 +1,6 @@
 runtime: php55 # Replace with php74 to use PHP 7.4 (beta)
 runtime_config:
-  document_root: quanlythuvien
+  document_root: public
 handlers:
 # Serve a directory as a static resource.
 - url: /stylesheets
