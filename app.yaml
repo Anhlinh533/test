@@ -1,24 +1,17 @@
-runtime: php72 # Replace with php74 to use PHP 7.4 (beta)
-runtime_config:
-  document_root: public
-handlers:
-# Serve a directory as a static resource.
-- url: /stylesheets
-  static_dir: stylesheets
+runtime: php72
 
-
-# Serve images as static resources.
-- url: /(.+\.(gif|png|jpg))$
-  static_files: \1
-  upload: .+\.(gif|png|jpg)$
-
-# Serve your app through a front controller at index.php or public/index.php.
-- url: .*
-  script: auto
-
-skip_files:
-- ^(.*/)?.zip$
-- ^(.*/)?.bat$
-- ^(.*/)?.sh$
-- ^(.*/)?.md$
-- ^vendor
+env_variables:
+  ## Put production environment variables here.
+  APP_KEY: base64:Bv9Y3EUgWWgDf8IajzE7OhoH5qe+HlAERXZp41SOtfY=
+  APP_STORAGE: /tmp
+  VIEW_COMPILED_PATH: /tmp
+  CACHE_DRIVER: database
+  SESSION_DRIVER: database
+  ## Set these environment variables according to your CloudSQL configuration.
+  DB_DATABASE: quanlythuvien
+  DB_USERNAME: nhom6
+  DB_PASSWORD: 123456
+  ## for MYSQL, use DB_SOCKET:
+#   DB_SOCKET: "/cloudsql/thuvien-296306:asia-southeast1:quanlythuvien"
+  ## for PostgreSQL, use DB_HOST:
+  DB_HOST: "/cloudsql/thuvien-296306:asia-southeast1:quanlythuvien"
