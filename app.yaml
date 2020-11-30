@@ -12,6 +12,6 @@ env_variables:
   DB_USERNAME: nhom6
   DB_PASSWORD: 123456
   ## for MYSQL, use DB_SOCKET:
-#   DB_SOCKET: "/cloudsql/thuvien-296306:asia-southeast1:quanlythuvien"
+  DB_SOCKET: "/cloudsql/thuvien-296306:asia-southeast1:quanlythuvien"
   ## for PostgreSQL, use DB_HOST:
-  DB_HOST: "/cloudsql/thuvien-296306:asia-southeast1:quanlythuvien"
+  #DB_HOST: "/cloudsql/thuvien-296306:asia-southeast1:quanlythuvien"
